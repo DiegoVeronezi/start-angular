@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Diego Veronezi da Silva -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="/assets/js/controller.js"></script>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body ng-app="myModule">
+    <div  ng-controller="myController">
+        <div class="input__position">
+            <input type="checkbox" ng-model="hideSalario"> Hide/Show Salario
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Sexo</th>
+                    <th>Cidade</th>
+                    <th ng-hide="hideSalario">Salario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="empregado in empregados">
+                    <td>{{ empregado.nome }}</td>
+                    <td>{{ empregado.sexo }}</td>
+                    <td>{{ empregado.cidade }}</td>
+                    <td ng-hide="hideSalario">{{ empregado.salario }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>    
+</body>
+</html>
