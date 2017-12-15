@@ -1,3 +1,28 @@
 .box-gamer{
-    background-color: red;
+   border: 2px solid;
+   box-sizing: border-box;
+   padding-left: 46%;
 }
+
+input{
+    display: block;
+}
+
+.tabela{
+    background-color: black;
+  }
+  
+  .linha{
+    width: 150px;
+    height: 150px;
+    background-color: greenyellow;
+    cursor: pointer;
+    text-align: center;
+    font-size: 110px;
+  }
+  
+  .invalido{
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+  }
